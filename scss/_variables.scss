@@ -1,0 +1,63 @@
+//variables
+$mainblue:#0BBED3;
+$white:#FFFFFF;
+$black:#000000;
+$darkblue:#001026;
+$grey:#DADBDB;
+$grey_darker:#aeaeae;
+$rouge:#e81c7b;
+$font_family:'Roboto Condensed', sans-serif;
+$animation:0.2s all linear;
+$b_radius:6px;
+
+//extends
+%input_base {
+	box-shadow: inset 0px 2px 0 0 rgba(0, 0, 0, 0.22);
+	border: 1px solid $grey;
+	border-radius: $b_radius;
+	&:focus {
+		background-color: $grey;
+	}
+}
+
+add_button {
+	width: 90px;
+	height: 35px;
+	background-color: $mainblue;
+	font-size: 20px;
+  	font-weight: 300;
+  	margin-left: 15px;
+  	color: $white;
+  	border-radius: $b_radius;
+  	cursor: pointer;
+  	&:hover {
+  		background-color: $rouge;
+  	}
+}
+
+//keyframes
+@keyframes input_show {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 320px;
+		border: 1px solid $white;
+		background-color: $mainblue;
+	}
+}
+
+@keyframes input_hide {
+	0% {
+		width: 320px;
+	}
+
+	20% {
+		border: 1px solid $white;
+	}
+	100% {
+		width: 0;
+		border: none;
+		background-color: transparent;
+	}
+}

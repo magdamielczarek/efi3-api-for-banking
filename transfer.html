@@ -1,0 +1,320 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efi3</title>
+    <link rel="stylesheet" type="text/css" href="fonts/font/flaticon.css"> 
+    <link rel="stylesheet" href="css/app.css">  
+  </head>
+
+  <body>  
+    <div class="navigation_large">
+      <div class="row">
+        <!--PERSONAL DETAILS-->
+        <div class="small-12 medium-4 column">
+          <div class="personal_info">
+            <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+            <img src="images/user_photo.png" />
+            <div>
+              <p class="name">Jan Kowalski</p>
+              <div class="profile_features">
+                <a class="flaticon-note"></a>
+                <a class="flaticon-settings"></a>
+                <ul class="tooltip_message">
+                  <li>
+                    <span class="flaticon-information-button"></span>
+                    Your gas budget was overspent by 5%!
+                  </li>
+                  <li>
+                    <span class="flaticon-speech-bubble-black"></span>
+                    You scheduled 500PLN payment for tomorrow.
+                  </li>
+                  <li>
+                    <a>SEE ALL</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MAIN MENU-->
+        <div class="small-12 medium-7 column">
+          <nav class="main_navigation">
+            <ul>
+              <li><a class="flaticon-homepage" href="index.html">HOME</a></li>
+              <li><a class="flaticon-technology" href="#">ANALYSE</a></li>
+              <li><a class="flaticon-calendar" href="#">PLAN</a></li>
+              <li><a class="flaticon-piled-files" href="#">EARN</a></li>
+            </ul>
+          </nav>  
+        </div>
+        <!--SEARCH AND LOG OUT-->
+        <div class="small-12 medium-1 column">
+          <div class="searching_and_login_wrapper">
+            <form class="searching">
+              <input type="search">
+              <span class="flaticon-search"></span>
+            </form>
+            <button id=log_out_button alt="login">
+              <span class="flaticon-power"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="row">
+        <div class="small-12 columns">
+          <form class="transfer_form" action="#" method="post" data-validate>
+            <div class="row">
+              <div class="small-12 columns">
+                <button class="flaticon-go-back-left-arrow"></button>
+              </div>
+            </div>
+            <fieldset>
+              <div class="row">
+                <div class="small-12 columns">
+                  <div class="wrapper_for_select">
+                    <div class="choose_account_hidden">
+                      <input type="radio" name="account" id="33_1234_5678_2233_0000_8373_7756">33 1234 5678 2233 0000 8373 7756</option>
+                      <input type="radio" name="account" id="33_1234_5678_2233_0000_8373_7752">33 1234 5678 2233 0000 8373 7752</option>
+                      <input type="radio" name="account" id="33_1234_5678_2233_0000_8373_8856">33 1234 5678 2233 0000 8373 8856</option>
+                    </div>
+                    <ul class="select_account">
+                      <li>
+                        <span class="flaticon-identity-card"></span>
+                        <label for="33_1234_5678_2233_0000_8373_7756">
+                          <span class="account_name">Current account</span>
+                          <span class="account_number">33 1234 5678 2233 0000 8373 7756</span>
+                        </label>
+                        <span class="current_account_balance">2 917,50 <span>PLN</span></span>
+                      </li>
+                      <li>
+                        <span class="flaticon-identity-card"></span>
+                        <label for="33_1234_5678_2233_0000_8373_7752">
+                          <span class="account_name">Saving account</span>
+                          <span class="account_number">33 1234 5678 2233 0000 8373 7752</span>
+                        </label>
+                        <span class="current_account_balance">50 000,00 <span>PLN</span></span>
+                      </li> 
+                      <li>
+                        <span class="flaticon-identity-card"></span>
+                        <label for="33_1234_5678_2233_0000_8373_8856">
+                          <span class="account_name">Business account</span>
+                          <span class="account_number">33 1234 5678 2233 0000 8373 8856</span>
+                        </label>
+                        <span class="current_account_balance">6 017,51 <span>PLN</span></span>
+                      </li>
+                    </ul>
+                    <button class="flaticon-chevron-arrow-down"></button>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="small-12 medium-7 medium-offset-4 columns">
+                <div class="add_account">
+                  <button><span class="flaticon-add"></span></button>
+                  <span>Add the account from which you draw  funds</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="transfer_type">Type</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <section id="transfer_type">
+                  <label for="country">
+                    <input type="radio" id="country" name="type_of_transfer" checked="checked">
+                    <div class="type_wrapper">
+                      <span class="flaticon-coins-stacks-with-arrow-upwards" alt=""></span>
+                    </div>
+                  Country</span>
+                  </label>
+                  <label for="own">
+                    <input type="radio" id="own" name="type_of_transfer">
+                    <div class="type_wrapper">
+                      <span class="flaticon-user-male-black-shape"></span>
+                    </div>
+                    <span>Own</span>
+                  </label>
+                  <label for="currencies">
+                    <input type="radio" id="currencies" name="type_of_transfer">
+                    <div class="type_wrapper">
+                      <span class="flaticon-different-currencies"></span>
+                    </div>
+                    <span>Currencies</span>
+                  </label>
+                  <label for="zus">
+                    <input type="radio" id="zus" name="type_of_transfer">
+                    <div class="type_wrapper">
+                      <span>ZUS</span>
+                    </div>
+                    <span>ZUS</span>
+                  </label>
+                  <label for="tax">
+                    <input type="radio" id="tax" name="type_of_transfer">
+                    <div class="type_wrapper">
+                      <span>US</span>
+                    </div>
+                    <span>TAX</span>
+                  </label>
+                  <label for="gsm">
+                    <input type="radio" id="gsm" name="type_of_transfer">
+                    <div class="type_wrapper">
+                      <span class="flaticon-cell-phone"></span>
+                    </div>
+                    <span>GSM</span>
+                  </label>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="recipient">Recipient</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <section id="recipient">
+                  <input type="text" placeholder="Search for a recipient, contractor or customer" data-validate-rules="required,no_special_char,max_length">
+                  <a href="#" class="flaticon-open-book" data-open="rec_book"></a>
+                  <ul> 
+                  </ul>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="where">Where</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <section id="where">
+                  <input type="radio" id="account" name="transfer_channel" checked="checked">
+                  <div class="radio_patch"></div>
+                  <label for="account">Account</label>
+                  <input type="radio" id="facebook" name="transfer_channel">
+                  <div class="radio_patch"></div>
+                  <label for="facebook">Facebook</label>
+                  <input type="radio" id="phone" name="transfer_channel">
+                  <div class="radio_patch"></div>
+                  <label for="phone">Phone</label>
+                  <input type="radio" id="email" name="transfer_channel">
+                  <div class="radio_patch"></div>
+                  <label for="email">Email</label>
+                  <input type="radio" id="byphone" name="transfer_channel">
+                  <div class="radio_patch"></div>
+                  <label for="byphone">By phone</label>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="number">Number</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <input type="text" id="number" data-validate-rules="required,account_pattern">
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="sum">Sum</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <input type="text" id="sum" data-validate-rules="required,amount_pattern">
+                <select>
+                  <option>PLN</option>
+                  <option>EURO</option>
+                  <option>USD</option>
+                  <option>CHF</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="date">When</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <section class="date">
+                  <input type="text" id="date" class="span2" data-validate-rules="required,future_date_only,date_future_boundry">
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="title">Title</label>  
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <input type="text" id="title" data-validate-rules="required,no_special_char,max_length">
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-2 large-4 columns">
+                <label for="speed_transfer">Type of transfer</label>
+              </div>
+              <div class="small-12 medium-10 large-8 columns">
+                <section id="speed_transfer">
+                  <input type="radio" id="normaly" name="speed_transfer" checked="checked"><div class="radio_patch"></div>
+                  <label for="normaly"><span>Normaly</span><span>about 2 days</span></label>
+                  <input type="radio" id="express" name="speed_transfer">
+                  <div class="radio_patch"></div>
+                  <label for="express"><span>Express Elixir</span><span>15 min</span></label>
+                  <input type="radio" id="sorbnet" name="speed_transfer">
+                  <div class="radio_patch"></div>
+                  <label for="sorbnet"><span>Sorbnet</span><span>2 hours</span></label>
+                  <div>
+                    <span class="flaticon-question-mark"></span>
+                    <dl class="tooltip_question">
+                      <dt>Normaly</dt>
+                      <dd>Proin vitae neque at sapien molestie  gravida. Phasellus sit amet neque  pharetra, rutrum neque vitae, placerat   turpis.</dd>
+                      <dt>Express Elixir</dt>
+                      <dd>Nullam in sapien neque. Donec odio  quam, ullamcorper quis feugiat ultricies,  porttitor at orci. Integer neque justo,  congue ut interdum et, fringilla   sollicitudin felis.</dd> 
+                      <dt>Sorbnet</dt>
+                      <dd>Quisque pretium neque et justo  consequat, vel dignissim nulla viverra.  Aliquam finibus tortor dictum,   sollicitudin magna id, porta lectus. In   ultrices sem vel erat vehicula, eu mattis   mauris ullamcorper.</dd>   
+                    </dl>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-9 medium-offset-4 columns">
+                <input type="submit" value="CONTINUE">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="small reveal" id="rec_book" data-reveal>
+          <button>ADD NEW RECIPIENT</button>
+            <form action="#" method="post" data-validate>
+              <label for="new_recipient_name">Name
+              <input type="text" id="new_recipient_name" data-validate-rules="required,no_special_char,max_length"></label>
+              <label for="new_recipient_account_number">Account number
+                <input type="text" id="new_recipient_account_number" data-validate-rules="required,account_pattern"></label>
+                <input type="submit" id="new_recipient_button" value="ADD">
+                <button>CANCEL</button>
+            </form>
+            <ul>
+              <li><span class="name">Marianna Kania</span><span class="number">44123456789933000075737904</span></li>
+              <li><span class="name">Bolesław Chrobry</span><span class="number">76073456783933000046759456</span></li>
+              <li><span class="name">Wszystko dla kota</span><span class="number">23844456783933000046752390</span></li>
+              <li><span class="name">Orange</span><span class="number">84073456322233000046753478</span></li>
+              <li><span class="name">Adam Mickiewicz</span><span class="number">14073456322043000090753758</span></li>
+              <li><span class="name">Innogy</span><span class="number">24303415644435000018932222</span></li>
+              <li><span class="name">Katarzyna Centkiewicz</span><span class="number">56073456322233000046753478</span></li>
+              <li><span class="name">Dobromir Pomysłowy</span><span class="number">26073456322233000046753478</span></li>
+              <li><span class="name">Euzebiusz Kalinko</span><span class="number">56393456322233000046753478</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/transfer.js"></script>  
+    <script src="js/validation.js"></script>  
+  </body>
+</html>

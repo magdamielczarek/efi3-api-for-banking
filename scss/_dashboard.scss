@@ -1,0 +1,359 @@
+/***************************************
+	daschobard
+****************************************/
+
+body {
+	font-family: $font_family;
+	font-size: 16px;
+}
+
+main {
+	background-color: $grey;
+	padding: 65px 0;
+}
+
+/********LIFE STREAMING SECTION********/
+
+//section with short balance, most important info
+.life_stream {
+	h1 {
+		font: {
+			size: 60px;
+  			weight: 300;
+  			stretch: condensed;
+  		}
+  		line-height: 0.4;
+  		text-align: left;
+  		color: $black;
+  	}
+}
+
+.add_bank_account {
+	display: flex;
+	align-items: center;
+	align-content: flex-end;
+	justify-content: flex-end;
+	button {
+		@extend add_button;
+		a {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}
+
+.life_data {
+	display: inline-block;
+	position: relative;
+	margin: 20px 70px 20px 0;
+	h2 {
+		margin: 0;
+		font: {
+			size: 30px;
+  			weight: 300;
+  			stretch: condensed;
+  		}
+	}
+	p {
+		margin: 0;
+		font: {
+			size: 28px;
+  			weight: 900;
+  			stretch: condensed;
+  		}
+		button {
+			@extend add_button;
+
+  		}
+	}
+}
+
+//turning on-off more detailed analyses - switch
+.life_switch {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 20px;
+}
+
+.checkbox_options {
+    width: 90px;
+	height: 35px;
+    border-radius: $b_radius;
+  	background-color: $white;
+  	position: relative;
+  	font: {
+  		size: 20px;
+  		weight: 300;
+  		stretch: condensed;
+  	}
+  	line-height: 34px;
+  	color: $black;
+  	text-align: center;
+  	vertical-align: middle;
+  	word-spacing: .5em;
+  	cursor: pointer;
+  	&:after {
+    	content: 'OFF';
+		position: absolute;
+		top: calc(50% - 15.5px);
+		left: 2px;
+		width: 41px;
+  		height: 31px;
+  		border-radius: 4px;
+  		background-color: #d9dada;
+  		vertical-align: middle;
+  		line-height: 31px;
+    }
+}
+
+.checkbox_options_on {
+	width: 90px;
+	height: 35px;
+    border-radius: $b_radius;
+  	background-color: $white;
+  	position: relative;
+  	font-size: 20px;
+  	font-weight: 300;
+  	font-stretch: condensed;
+  	line-height: 34px;
+  	color: $black;
+  	text-align: center;
+  	vertical-align: middle;
+  	word-spacing: .5em;
+  	cursor: pointer;
+  	&:after {
+    	content: 'ON';
+		position: absolute;
+		top: calc(50% - 15.5px);
+		left: 52%;
+		width: 41px;
+  		height: 31px;
+  		border-radius: 4px;
+  		background-color: #80c801;
+  		vertical-align: middle;
+  		line-height: 31px;
+    }
+}
+
+#checkbox_input {
+	visibility: hidden;
+	margin: 0;
+}
+
+//for mobile
+.new_expense {
+	display: none;
+}
+
+/********SECTION WITH ANALYSES********/
+
+.chart {
+	margin: 30px 0;
+}
+
+#main_chart_wrapper
+{
+	width: 100%;
+	height: 45vh;
+	background-color: $white;
+	border-radius:$b_radius;
+}
+
+.analysis_container {
+	display: none;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 70px;
+	h3 {
+		font-size: 0.875rem;
+	}
+	select {
+		border-radius: $b_radius;
+		}
+}
+
+#income_chart_wrapper,
+#expences_chart_wrapper,
+#balance_chart_wrapper {
+	width: 100%;
+	height: 550px;
+}
+
+.tabs-content {
+	width: 100%;
+    border: none;
+    background: none;
+    transition: none;
+}
+
+.vertical, 
+.tabs {
+	background-color: transparent;
+	border: none;
+	margin-bottom: 15px;
+}
+.tabs-title {
+	margin-bottom: 2px;
+	background-color: none;
+	text-align: center;
+	a {
+		padding: 0;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 2rem;
+		color: $white;
+		background-color: #aeaeae;
+		border-radius:$b_radius;
+		&:hover {
+		color: $white;
+		background-color: $mainblue;
+		}
+		&:focus {
+			color: $white;
+			outline: none;
+			background-color: $mainblue;
+		}
+	}
+}
+
+.categories,
+.period {
+	appearance: none;
+	background-image: url("../images/001-angle-arrow-down.svg");
+	background-size: contain;
+}
+
+.ads {
+	padding: 15px;
+	border: 2px solid #aeaeae;
+	.flaticon-right-direction-filled-hand-gesture:before {
+		margin-right: 15px;
+		color: $mainblue;
+	}
+	a {
+		color: $mainblue;
+	}
+}
+
+
+/******** SECTION WITH PRODUCTS ********/
+
+h2 {
+	font-size: 20px;
+}
+
+.products {
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: space-between;
+	justify-content: space-between;
+	font-size: 20px;
+	list-style-type: none;
+	li {
+		height: 100px;
+		width:49%;
+		margin-bottom: 0.75rem;
+		display: flex;
+		color: $black;
+		background-color: $white;
+		border-radius: $b_radius;
+		}
+	a {
+		height: 100px;
+		width: 100%;
+		padding: 20px;
+		color: $black;
+		border-radius: $b_radius;
+		&:hover {
+			color: $white;
+			background-color: $mainblue;
+			transition: $animation;
+		}
+		span {
+			display: block;
+		}
+	}
+}
+
+.products a:hover span[class^="flat"]:before {
+	color: $white;
+	transition: $animation;
+}
+
+.flaticon-wallet-filled-money-tool:before,
+.flaticon-piggy-bank-and-a-dollar-coin:before,
+.flaticon-money:before,
+.flaticon-graphic:before,
+.flaticon-right-direction-filled-hand-gesture:before {
+	font-size: 40px;
+	color: #ababab;
+	float: left;
+	margin-right: 15px;
+}
+
+
+/******** SECTION WITH HISTORY ********/
+
+.history_dashboard {
+	height: 450px;
+	margin: 0;
+	font-size: 18px;
+	list-style-type: none;
+	background-color: $white;
+	border-radius: $b_radius;
+	overflow: auto;
+	//header visible only for mobile
+	.mobile_history_header {
+		display: none;
+	}
+	li {
+		width: 100%;
+		height: 90px;
+		padding: 15px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 18px;
+		border-bottom: 2px solid $grey;
+		overflow: hidden;
+		time {
+			width: 10%;
+			text-align: center;
+			white-space: nowrap;
+			}
+		form {
+			width: 65%;
+			display: flex;
+			justify-content: flex-start;
+				label {
+				display: flex;
+				flex-flow: column nowrap;
+				font-size: 18px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				}
+				select {
+				width: max-content;
+				margin-bottom: 5px;
+				padding-left: 0;
+				appearance: none;
+				border: none;
+				background-image: url("../images/001-angle-arrow-down.svg");
+				background-size: contain;
+				&:focus {
+					border: 1px solid $mainblue;
+					}
+				}
+			}
+		span {
+			width: 20%;
+			text-align: right;
+			white-space: nowrap;
+			font-weight: 700;
+		}
+	}
+}

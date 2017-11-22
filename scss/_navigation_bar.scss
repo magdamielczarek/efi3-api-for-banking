@@ -1,0 +1,259 @@
+/***************************************
+	header with navigation 
+	and searching for all pages
+****************************************/
+
+.navigation_large {
+	color: $white;
+	background-color: $mainblue;
+}
+
+/********PERSONAL DETAILS********/
+
+.personal_info {
+	padding:20px 0;
+	position: relative;
+	display: flex;
+	img {
+		max-width: 100px;
+		height: 100px;
+		margin-right: 5px;	
+	}
+	img:first-child {
+		padding: 15px;
+		border:2px solid rgba($white, 0.3);
+  		border-radius: $b_radius;
+	}
+	img:nth-child(2) {
+		clip-path:inset(0px round $b_radius);
+	}
+	.name {
+		font-size: 30px;
+		padding-left: 16px;
+		white-space: nowrap;
+	}
+}
+
+//message and settings icons
+.flaticon-settings, 
+.flaticon-note {
+	position: relative;
+	&:before {
+		margin-left: 20px;
+		font-size: 30px;
+		color: $white;
+		transition: $animation;
+	}
+}
+
+// hover for message and settings icons
+.flaticon-settings:hover:before,
+.flaticon-note:hover:before {
+	color: $black;
+	transition: $animation;
+}
+
+//info about number of new messages
+.flaticon-note:after {
+	content: '2';
+	width: 1.5rem;
+	height: 1.5rem;
+	position: absolute;
+  	bottom: 80%;
+  	left: 80%;
+  	text-align: center;
+  	color: $white;
+  	font-family: $font_family;
+	border-radius: 50%;
+	background-color: $rouge;
+  	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.22);
+}
+
+//tooltip with additional info about messages
+.tooltip_message {
+	display: none;
+	width: 18rem;
+	position: absolute;
+	top: 100%;
+	left: 15%;
+	color: $white;
+	font-weight: 300;
+	background-color: $black;
+	border-radius: $b_radius;
+	list-style-type: none;
+	z-index: 1;
+	//triangle for tooltip
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		bottom:100%;
+		left:calc(50% - 13px);
+		border-bottom: 26px solid $black;
+		border-left: 26px solid transparent;
+	}
+	li {
+		padding: 16px;
+		display: flex;
+		border-bottom: 1px solid rgba($white,0.3);
+		&:last-child {
+			justify-content: center;
+		}
+	}
+}
+
+.flaticon-information-button,
+.flaticon-speech-bubble-black {
+	background-color: #F00;
+	border-radius: $b_radius;
+	padding: 4px 10px;
+	margin-right: 12px;
+	&:before {
+	font-size: 25px;
+	}
+}
+
+.flaticon-speech-bubble-black {
+	background-color: #139f37;
+}
+
+
+/********MAIN MENU********/
+
+.main_navigation {
+	height: 100%;
+	display: flex;
+	ul {
+		width: 50%;
+		height: inherit;
+		margin: 0 auto;
+		display: inline-flex;
+		list-style-type: none;
+		li {
+			position: relative;
+			flex: 1 1 90px;
+			text-align: center;
+			transition: $animation;
+			&:hover,
+			&:active {
+				background-color: $black;
+				transition: $animation;
+			}
+			//triangle for menu item
+			&:after {
+				content: '';
+				width: 20px;
+				height: 10px;
+				position: absolute;
+				top: 100%;
+				left: calc(50% - 10px);
+				border-radius: 0 0 10px 10px;
+				background-color: $black;
+				opacity: 0;
+				transition: $animation;
+			}
+			a {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				text-align: center;
+				&:hover,&:active,&:focus {
+					color: $white;
+					transition: $animation;
+				}
+			}
+		}
+	}
+}
+
+//displaying triangle when hovering menu item
+.main_navigation>ul>li:hover:after {
+	display: block;
+	opacity: 1;
+	transition: $animation;
+}
+
+//menu icons
+.flaticon-homepage:before,
+.flaticon-technology:before,
+.flaticon-calendar:before,
+.flaticon-piled-files:before {
+	font-size: 40px;
+	color: $white;
+	transition: $animation;
+}
+
+//hiding mobile menu 
+nav.mobile {
+	display: none;	
+}
+
+
+/********LOG-OUT AND SEARCHING********/
+
+
+.searching_and_login_wrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.searching {
+	height: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	align-content: flex-end;
+	justify-content: space-between;
+	padding-right: 10px;
+	border-radius: $b_radius;
+}
+
+.searching input[type="search"] {
+	width: 0;
+	height: 80%;
+	position: absolute;
+	right: 0;
+	color: $white;
+	background-color: $mainblue;
+	border: none;
+	box-shadow: none;
+	border-radius: $b_radius;
+	&:focus {
+		border: none;
+		background-color: transparent;
+		box-shadow: none;
+	}
+}
+
+.flaticon-search:before,
+.flaticon-power:before {
+	font-size: 40px;
+	color: $white;
+	transition: $animation;
+}
+
+.flaticon-power:before {
+	color: $rouge;
+}
+
+.flaticon-power,
+.flaticon-search {
+	z-index: 1; //show above input
+	&:hover:before {
+		cursor: pointer;
+	}
+}
+
+#log_out_button {
+	border-left:2px solid rgba($white, 0.3);
+	padding-left: 10px;
+	cursor: pointer;
+}
+

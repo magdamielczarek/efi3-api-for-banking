@@ -1,0 +1,242 @@
+
+
+/************ background for content ***************/
+
+body {
+	background-color: $grey;
+}
+
+.history {
+	padding: 20px 0 50px 0;
+	border-radius: 0;
+	h1 {
+		font-size: 65px;
+		font-weight: 300;
+		font-stretch: condensed;
+	}
+}
+
+
+/************ filtering and searching bar ***************/
+
+/*label[for="search_history"],
+label[for="filter_category"] {
+	font-size: 16px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+#search_history {
+	width: 270px;
+	display: inline-block;
+	box-shadow: inset 0px 2px 0 0 rgba(0, 0, 0, 0.22);
+	border: 1px solid $grey;
+	border-radius: $b_radius;
+	background: url("../images/search.svg") $white no-repeat;
+	background-size: 8%;
+	background-position: 95% 50%;
+}
+
+
+}*/
+
+#filter_category,
+#search_history {
+	@extend %input_base;
+	&:focus {
+		background-color: $white;
+	}
+}
+
+.filters {
+	select {
+		appearance: none;
+		user-select: none;
+		background-image: url("../images/001-angle-arrow-down.svg");
+		background-size: contain;
+	}
+}
+
+/************ expanded filtering options ***************/
+
+.date_expanded_options,
+.category_expanded_options,
+.amount_expanded_options {
+	display: none;
+	margin: 20px 0;
+	padding: 20px;
+	text-align: center;
+	background-color: $white;
+	border: $b_radius;
+	border-radius: $b_radius;
+	h3 {
+		width: 100%;
+		font-family: $font-family;
+		font-size: 18px;
+		text-align: center;
+	}
+	button {
+		display: block;
+		width: 200px;
+		height: 30px;
+		margin: 20px auto;
+		color: $white;
+		font-size: 20px;
+		background-color: $grey_darker;
+		border-radius: $b_radius;
+		transition: $animation;
+			&:hover {
+			background-color: $mainblue;
+			cursor: pointer;
+			}
+		}
+	.filter_button {
+		background-color: $rouge;
+		&:hover {
+			background-color: $rouge;
+		}
+	}
+}
+
+.date_expanded_options {
+	input {
+		@extend %input_base;
+		display: inline-block;
+		width: 200px;
+		margin: 20px 10px;
+	}	
+	label {
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+.category_expanded_options {
+	input {
+		appearance: none;
+	}
+	.checkbox_patch {
+		display: inline-block;
+		width: 150px;
+		margin: 10px;
+		color: $white;
+		text-align: center;
+		font-size: 20px;
+		background-color: $grey_darker;
+		border-radius: $b_radius;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	span {
+		margin-right: 100px;
+		font-weight: 700;
+	}
+}
+
+.amount_expanded_options {
+	input {
+		@extend %input_base;
+		width: 200px;
+		display: inline-block;
+		margin: 20px 10px;
+	}	
+	label {
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+.ui-datepicker {
+	width: 290px;
+}
+
+/****************** table with history *********************/
+.table_header {
+	display: flex;
+	padding: 0 5px;
+	color: $black;
+	background-color: transparent;	
+	span:first-child {
+		//width: 10%;
+		flex: 1 1;
+	}
+	span:nth-child(2) {
+		//width: 60%;
+		flex: 6 6;
+	}
+	span:nth-child(3) {
+		//width: 20%;
+		flex: 2 2;
+	}
+	span:last-child {
+		//width: 10%;
+		flex: 1 1;
+		text-align: right;
+	}
+}
+
+.history_extended {
+	margin: 0;
+	list-style-type: none;
+	div {
+		width: 100%;
+		height: 90px;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		border-bottom: 2px solid $grey;
+		border-radius: $b_radius;
+		background-color: $white;
+		time {
+			//width: 10%;
+			flex: 1 1;
+			padding-left: 10px;
+			white-space: nowrap;
+			}
+		label {
+			//width: 60%;
+			flex: 6 6;
+			font-size: 20px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		select {
+			//width: 10%;
+			flex: 1 1;
+			margin-bottom: 5px;
+			padding: 3px;
+			font-size: 20px;
+			border: none;
+			appearance: none;
+			user-select: none;
+			background: {
+				image: url("../images/001-angle-arrow-down.svg");
+				repeat: no-repeat;
+				size: 20%;
+				position: 95% 50%;
+			}
+			&:focus {
+			border: 1px solid $mainblue;
+				}
+		}
+		span {
+			//width: 20%;
+			flex: 2 2;
+			white-space: nowrap;
+			font-weight: 700;
+			text-align: right;
+		}
+	}
+}
+
+.no_results_info {
+	display: none;
+	height: 300px;
+	padding:125px 0;
+	font-size: 25px;
+	text-align: center;
+	background-color: $white;
+	border-radius: $b_radius;
+}

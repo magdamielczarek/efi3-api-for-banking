@@ -1,0 +1,91 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 01/09/2017 21:06
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-go-back-left-arrow:before { content: "\f100"; }
+.flaticon-coins-stacks-with-arrow-upwards:before { content: "\f101"; }
+.flaticon-open-book:before { content: "\f102"; }
+.flaticon-user-male-black-shape:before { content: "\f103"; }
+.flaticon-calendar-with-a-clock-time-tools:before { content: "\f104"; }
+.flaticon-different-currencies:before { content: "\f105"; }
+.flaticon-cell-phone:before { content: "\f106"; }
+.flaticon-question-mark:before { content: "\f107"; }
+.flaticon-add:before { content: "\f108"; }
+.flaticon-identity-card:before { content: "\f109"; }
+.flaticon-chevron-arrow-down:before { content: "\f10a"; }
+.flaticon-speech-bubble-black:before { content: "\f10b"; }
+.flaticon-information-button:before { content: "\f10c"; }
+.flaticon-right-direction-filled-hand-gesture:before { content: "\f10d"; }
+.flaticon-graphic:before { content: "\f10e"; }
+.flaticon-money:before { content: "\f10f"; }
+.flaticon-piggy-bank-and-a-dollar-coin:before { content: "\f110"; }
+.flaticon-wallet-filled-money-tool:before { content: "\f111"; }
+.flaticon-power:before { content: "\f112"; }
+.flaticon-search:before { content: "\f113"; }
+.flaticon-calendar:before { content: "\f114"; }
+.flaticon-technology:before { content: "\f115"; }
+.flaticon-piled-files:before { content: "\f116"; }
+.flaticon-homepage:before { content: "\f117"; }
+.flaticon-settings:before { content: "\f118"; }
+.flaticon-note:before { content: "\f119"; }
+    
+    $font-Flaticon-go-back-left-arrow: "\f100";
+    $font-Flaticon-coins-stacks-with-arrow-upwards: "\f101";
+    $font-Flaticon-open-book: "\f102";
+    $font-Flaticon-user-male-black-shape: "\f103";
+    $font-Flaticon-calendar-with-a-clock-time-tools: "\f104";
+    $font-Flaticon-different-currencies: "\f105";
+    $font-Flaticon-cell-phone: "\f106";
+    $font-Flaticon-question-mark: "\f107";
+    $font-Flaticon-add: "\f108";
+    $font-Flaticon-identity-card: "\f109";
+    $font-Flaticon-chevron-arrow-down: "\f10a";
+    $font-Flaticon-speech-bubble-black: "\f10b";
+    $font-Flaticon-information-button: "\f10c";
+    $font-Flaticon-right-direction-filled-hand-gesture: "\f10d";
+    $font-Flaticon-graphic: "\f10e";
+    $font-Flaticon-money: "\f10f";
+    $font-Flaticon-piggy-bank-and-a-dollar-coin: "\f110";
+    $font-Flaticon-wallet-filled-money-tool: "\f111";
+    $font-Flaticon-power: "\f112";
+    $font-Flaticon-search: "\f113";
+    $font-Flaticon-calendar: "\f114";
+    $font-Flaticon-technology: "\f115";
+    $font-Flaticon-piled-files: "\f116";
+    $font-Flaticon-homepage: "\f117";
+    $font-Flaticon-settings: "\f118";
+    $font-Flaticon-note: "\f119";

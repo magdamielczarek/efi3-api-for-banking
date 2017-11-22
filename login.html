@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efi3 login</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon_login/flaticon.css">
+  </head>
+  
+  <body>
+    <div class="login_wrapper">
+      <div class="row align-center">
+        <div class="small-12 medium-3 large-2 column">
+          <div class=logo>
+            <img src="images/001-epsilon.png" alt="logo banku efi3" />
+          </div>
+        </div>
+        
+        <div class="small-12 medium-9 large-8 column">
+          <div class="log_wrapper"> 
+            <div class="log_panel">
+              <h1>Login</h1>
+              <p>Aby zaimportować dane, zaloguj się do swojego banku</p>
+              <form>
+                <fieldset>
+                  <div class="avatar"></div>
+                  <span class="user_id">127633223</span>
+                  <div class="delete_user_id"></div>
+                  <input type="text" id="user_new_id" placeholder="nazwa użytkownika" />
+                  <input type="password" id="password" placeholder="hasło" />
+                  <button class="keyboard"><img src="images/keyboard.png" alt="ikona klawiatury komputerowej" /></button>
+                  <button class="other_user">SELECT OTHER</button>
+                  <input type="submit" value="GO" />
+                </fieldset>
+              </form>
+            </div>
+          
+            <footer>
+              <ul>
+                <li><a href="#">SECURITY</a></li>
+                <li><a href="#">LOGGIN IN</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li class="facebook"><a href="#" class="flaticon-facebook-logo"></a></li>
+              </ul>
+            </footer>
+          </div>  
+        </div> <!--column with form-->
+      </div> <!--row-->
+    </div> <!--end of wrapper-->
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/login.js"></script>
+
+  </body>
+
+</html>

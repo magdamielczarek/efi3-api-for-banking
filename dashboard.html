@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efi3</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon_dashboard/flaticon.css">
+    <script src="amcharts/amcharts/amcharts.js"></script>
+    <script src="amcharts/amcharts/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="amcharts/amcharts/plugins/responsive/responsive.min.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>  
+    
+    <div class="row">
+      <nav class="mobile"> 
+        <button class="mobile_menu_button"></button>
+        <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+        <a class="flaticon-note"></a>
+        <ul>
+          <li><a>HOME</a></li>
+          <li><a>ANALYSE</a></li>
+          <li><a>PLAN</a></li>
+          <li><a>EARN</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="navigation_large">
+      <div class="row">
+        <!--PERSONAL DETAILS-->
+        <div class="small-12 medium-4 column">
+          <div class="personal_info">
+            <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+            <img src="images/user_photo.png" />
+            <div>
+              <p class="name">Jan Kowalski</p>
+              <div class="profile_features">
+                <a class="flaticon-note"></a>
+                <a class="flaticon-settings"></a>
+                <ul class="tooltip_message">
+                  <li>
+                    <span class="flaticon-information-button"></span>
+                    Your gas budget was overspent by 5%!
+                  </li>
+                  <li>
+                    <span class="flaticon-speech-bubble-black"></span>
+                    You scheduled 500PLN payment for tomorrow.
+                  </li>
+                  <li>
+                    <a>SEE ALL</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MAIN MENU-->
+        <div class="small-12 medium-7 column">
+          <nav class="main_navigation">
+            <ul>
+              <li><a class="flaticon-homepage" href="index.html">HOME</a></li>
+              <li><a class="flaticon-technology" href="#">ANALYSE</a></li>
+              <li><a class="flaticon-calendar" href="#">PLAN</a></li>
+              <li><a class="flaticon-piled-files" href="#">EARN</a></li>
+            </ul>
+          </nav>  
+        </div>
+        <!--SEARCH AND LOG OUT-->
+        <div class="small-12 medium-1 column">
+          <div class="searching_and_login_wrapper">
+            <form class="searching">
+              <input type="search">
+              <span class="flaticon-search"></span>
+            </form>
+            <button id=log_out_button alt="login">
+              <span class="flaticon-power"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <main>
+      <!--LIFE STREAMING-->
+      <section class="life_stream">
+        <div class="row">
+          <div class="small-10 medium-9 columns">
+            <h1>Finance life stream</h1>
+          </div>
+          <div class="small-2 medium-3 clumns">
+            <div class="add_bank_account">
+              <span>Add</span>
+              <button>BANK</button>
+              <button class="transfer_button"><a href="transfer.html">PAYMENT</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-9 columns">
+            <div class="life_data">
+              <h2>Balance</h2>
+              <p class="balance">loading</p>
+            </div>
+            <div class="life_data">
+              <h2>Available funds</h2>
+              <p class="funds">loading</p>
+            </div>
+            <button class="new_expense">ADD NEW EXPENSE</button>
+            <div class="life_data">
+              <h2>Scheduled payments</h2>
+              <p class="payments">loading
+                <button>FAST PAY</button>
+              </p>
+            </div>
+          </div>
+          <div class="small-12 medium-3 clumns">
+            <form class="life_switch">
+              <label for="checkbox_input">Accounts analysis
+                <input type="checkbox" value="0" id="checkbox_input">
+              </label> 
+              <span class="checkbox_options">
+                <span class="off">OFF</span>
+                <span class="on">ON</span>
+              </span>
+            </form>   
+          </div> 
+        </div>
+      </section>
+    <!--ACCOUNT ANALYSES - CHARTS-->
+    <section class="chart">
+      <div class="row">
+        <div class="small-12 medium-12 columns">
+          <div id="main_chart_wrapper">
+          </div>
+        </div>
+      </div>
+      <!--MORE SPECIFIC ANALYSES-->
+      <div class="row">
+        <div class="analysis_container"> 
+          <div class="medium-3 columns">
+            <h3>Show</h3>
+            <ul class="vertical tabs" data-tabs id="analysis_charts">
+              <li class="tabs-title is-active">
+                <a href="#income_chart" aria-selected="true">INCOME</a>
+              </li>
+              <li class="tabs-title">
+                <a href="#expences_chart">EXPENCES</a>
+              </li>
+              <li class="tabs-title">
+                <a href="#balance_chart">BALANCE</a>
+              </li>
+            </ul>
+            <label>Choose time period</label>
+            <select class="period">
+              <option>LAST WEEK</option>
+              <option>LAST 30 DAYS</option>
+              <option>LAST YEAR</option>
+            </select>
+            <label>Sort by</label>
+            <select class="categories">
+              <option>ALL CATEGORIES</option>
+              <option>CAR</option>
+              <option>HOME</option>
+              <option>FOOD</option>
+              <option>STUDIES</option>
+            </select>
+            <aside class="ads">
+              <span class="flaticon-right-direction-filled-hand-gesture"></span>
+              <span>Lower your expences by using 5% cashback on VISA credit card <a>FIND OUT</a></span>
+            </aside>
+          </div>
+          <div class="medium-9 columns">
+            <div class="tabs-content" data-tabs-content="analysis_charts">
+              <div class="tabs-panel is-active" id="income_chart">
+                <div id="income_chart_wrapper">
+                </div>
+              </div>
+              <div class="tabs-panel" id="expences_chart">
+                <div id="expences_chart_wrapper">
+                </div>
+              </div>
+              <div class="tabs-panel" id="balance_chart">
+                <div id="balance_chart_wrapper">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--PRODUCTS-->
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <section class="products_section">
+          <h2>Products</h2>
+          <ul class="products">
+          </ul>
+        </section>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <!--HISTORY-->
+        <section class="history_section">
+          <h2>History</h2>
+          <ul class="history_dashboard">
+          </ul> 
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/what-input/dist/what-input.js"></script>
+  <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="js/dashboard.js"></script>
+    
+  </body>
+</html>

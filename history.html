@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efi3</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon_dashboard/flaticon.css">
+  </head>
+
+  <body>   
+    <header>
+    <div class="row">
+      <nav class="mobile"> 
+        <button class="mobile_menu_button"></button>
+        <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+        <a class="flaticon-note"></a>
+        <ul>
+          <li><a>HOME</a></li>
+          <li><a>ANALYSE</a></li>
+          <li><a>PLAN</a></li>
+          <li><a>EARN</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="row">
+      <nav class="mobile"> 
+        <button class="mobile_menu_button"></button>
+        <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+        <a class="flaticon-note"></a>
+        <ul>
+          <li><a>HOME</a></li>
+          <li><a>ANALYSE</a></li>
+          <li><a>PLAN</a></li>
+          <li><a>EARN</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="navigation_large">
+      <div class="row">
+        <!--PERSONAL DETAILS-->
+        <div class="small-12 medium-4 column">
+          <div class="personal_info">
+            <img src="images/001-epsilon.png" alt="logo banku efi3"  />
+            <img src="images/user_photo.png" />
+            <div>
+              <p class="name">Jan Kowalski</p>
+              <div class="profile_features">
+                <a class="flaticon-note"></a>
+                <a class="flaticon-settings"></a>
+                <ul class="tooltip_message">
+                  <li>
+                    <span class="flaticon-information-button"></span>
+                    Your gas budget was overspent by 5%!
+                  </li>
+                  <li>
+                    <span class="flaticon-speech-bubble-black"></span>
+                    You scheduled 500PLN payment for tomorrow.
+                  </li>
+                  <li>
+                    <a>SEE ALL</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MAIN MENU-->
+        <div class="small-12 medium-7 column">
+          <nav class="main_navigation">
+            <ul>
+              <li><a class="flaticon-homepage" href="index.html">HOME</a></li>
+              <li><a class="flaticon-technology" href="#">ANALYSE</a></li>
+              <li><a class="flaticon-calendar" href="#">PLAN</a></li>
+              <li><a class="flaticon-piled-files" href="#">EARN</a></li>
+            </ul>
+          </nav>  
+        </div>
+        <!--SEARCH AND LOG OUT-->
+        <div class="small-12 medium-1 column">
+          <div class="searching_and_login_wrapper">
+            <form class="searching">
+              <input type="search">
+              <span class="flaticon-search"></span>
+            </form>
+            <button id=log_out_button alt="login">
+              <span class="flaticon-power"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="history">
+      <div class="row align-middle">
+        <div class="small-12 medium-7 columns">
+          <h1>History</h1>
+        </div>
+        <div class="small-12 medium-3 columns">
+          <form class="search_history">
+            <label for="search_history">Search</label>
+            <input type="search" id="search_history">
+          </form>
+        </div> 
+        <div class="small-12 medium-2 columns">
+          <form class="filters"> 
+            <label for="filter_category">Filter by</label>
+            <select id="filter_category">
+              <option>NONE</option>
+              <option>DATE</option>
+              <option>CATEGORY</option>
+              <option>AMOUNT</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <!--hidden, more detailed options-->
+      <div class="row">
+        <div class="small-12 columns">
+          <section class="date_expanded_options">        
+            <div class="row">
+              <div class="small-12 columns">
+                <h3>Select range or set custom</h3>
+              </div>
+            </div>
+            <div class="row align-middle">
+              <div class="small-12 medium-6 columns">
+                <button>LAST WEEK</button>
+                <button>LAST MONTH</button>
+                <button>LAST YEAR</button>  
+              </div>
+              <div class="small-12 medium-6 columns">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from">
+                <label for="to">To</label>
+                <input type="text" id="to" name="to">
+                <button class="filter_button">FILTER</button>
+              </div>
+            </div>
+          </section>
+          <section class="category_expanded_options">
+            <div class="row">
+              <div class="small-12 columns">
+                <h3>Select at least one category</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <div class="checkbox_patch">
+                  <input type="checkbox" id="cash_category">Cash
+                </div>
+                <div class="checkbox_patch">
+                  <input type="checkbox" id="food_category">Food
+                </div>
+                <div class="checkbox_patch">
+                  <input type="checkbox" id="gas_category">Gas
+                </div>
+                <div class="checkbox_patch">
+                  <input type="checkbox" id="education_category">Education
+                </div>
+                <div class="checkbox_patch">
+                  <input type="checkbox" id="fun_category">Fun
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="amount_expanded_options">
+            <div class="row">
+              <div class="small-12 columns">
+                <h3>Select one option or set custom range</h3>
+              </div>
+            </div>
+            <div class="row align-middle">
+              <div class="small-12 medium-6 columns">
+                <button class="incomes_button">INCOMES</button>
+                <button class="outcomes_button">OUTCOMES</button>
+              </div>
+              <div class="small-12 medium-6 columns">
+                <label for="min">Min<input type="text" id="min" name="min"></label>
+                <label for="max">Max
+                <input type="text" id="max" name="max">
+                </label>
+                <button class="filter_button">FILTER</button>
+              </div>
+            </div>   
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <header class="table_header">
+            <span>Date</span>
+            <span>Details</span>
+            <span>Category</span>
+            <span>Amount</span>
+          </header>
+          <ul class="history_extended">
+          </ul>
+          <div class="no_results_info">
+            <span>No results. Change criteria.</span>
+          </div> 
+        </div>
+      </div>
+    </main>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/history.js"></script>
+    
+  </body>
+</html>
