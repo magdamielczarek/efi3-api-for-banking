@@ -4,22 +4,100 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Efi3</title>
+    <link rel="stylesheet" type="text/css" href="fonts/index_font/flaticon.css"> 
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    
-  <header>
-    
-  </header>
-  <div class="wrapper">
-    
-  </div>
+
+    <main class="index_wrapper">
+      <div class="logo">
+        <img src="images/001-epsilon.png" alt="logo banku efi3" />
+      </div>
+      <h1>Podstrony projektu:</h1>
+      <nav class="project_components">
+        <ul>
+          <li class="go_login">
+            <a href="login.html">
+              <span class="flaticon-power"></span>Login</a>
+            </li>
+          <li class="go_dashboard">
+            <a href="dashboard.html">
+            <span class="flaticon-download-business-statistics-symbol-of-a-graphic"></span>Dashboard</a>
+          </li>
+          <li class="go_history">
+            <a href="history.html">
+              <span class="flaticon-history-clock-button"></span>History
+            </a></li>
+          <li class="go_transfer">
+            <a href="transfer.html"><span class="flaticon-money"></span>Transfer</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="pages_details">
+        <article class="login_page">
+          <p>Ekran logowania do bankowości elektronicznej.</p>
+          <div class="image_wrapper">
+            <div class="page_screen">
+              <img src="images/screens/login_1.png" alt="screen with login page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/login_2.png" alt="screen with login page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/login_3.png" alt="screen with login page">
+            </div>
+          </div>
+        </article>
+        <article class="dashboard_page">
+          <p>Skondensowane informacje na temat najważniejszych produktów klienta, historia operacji oraz aktualny bilans finansowy, a także bardziej szczegółowa analiza wydatków i wpływów na konto w postaci wykresów. Centrum zarządzania kontem, przekierowujące do kolejnych funkcjonalności (przelewów, historii).</p>
+          <div class="image_wrapper">
+            <div class="page_screen">
+              <img src="images/screens/dashboard_1.png" alt="screen with dashboard page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/dashboard_2.png" alt="screen with dashboard page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/dashboard_3.png" alt="screen with dashboard page">
+            </div>
+          <div class="image_wrapper">
+        </article>
+        <article class="history_page">
+          <p>Bardziej rozbudowana historia operacji finansowych na koncie. Z możliwością wyszukiwania oraz filtrowania danych.</p>
+          <div class="image_wrapper">
+            <div class="page_screen">
+              <img src="images/screens/history_1.png" alt="screen with history page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/history_2.png" alt="screen with history page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/history_3.png" alt="screen with history page">
+            </div>
+          </div>
+        </article>
+        <article class="transfer_page">
+          <p>Formularz wypełniany przez klienta podczas wykonywania przelewu środków.</p>
+          <div class="image_wrapper">
+            <div class="page_screen">
+              <img src="images/screens/transfer_1.png" alt="screen with transfer page">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/transfer_2.png" alt="screen with transfer page - view with validation error">
+            </div>
+            <div class="page_screen">
+              <img src="images/screens/transfer_3.png" alt="screen with transfer page - adding recipient">
+            </div>
+          </div>
+        </article>
+      </section> 
+    </main>
 
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
