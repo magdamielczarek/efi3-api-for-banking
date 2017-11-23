@@ -232,15 +232,19 @@ nav.mobile {
 	}
 }
 
-.flaticon-search:before,
-.flaticon-power:before {
-	font-size: 40px;
-	color: $white;
-	transition: $animation;
+.searching_and_login_wrapper {
+	.flaticon-search:before,
+	.flaticon-power:before {
+		font-size: 40px;
+		color: $white;
+		transition: $animation;
+	}
 }
 
-.flaticon-power:before {
-	color: $rouge;
+.searching_and_login_wrapper {
+	.flaticon-power:before {
+		color: $rouge;
+	}
 }
 
 .flaticon-power,

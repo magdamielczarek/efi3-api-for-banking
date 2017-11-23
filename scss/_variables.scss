@@ -36,6 +36,27 @@ add_button {
 }
 
 //keyframes
+
+@keyframes show_screens {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes hide_screens {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
 @keyframes input_show {
 	0% {
 		width: 0;
