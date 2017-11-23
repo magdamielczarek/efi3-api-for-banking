@@ -7542,7 +7542,7 @@ a.thumbnail image {
   background-color: #DADBDB;
 }
 
-add_button, .add_bank_account button, .life_data p button {
+add_button, .project_components ul li, .add_bank_account button, .life_data p button {
   width: 90px;
   height: 35px;
   background-color: #0BBED3;
@@ -7554,8 +7554,26 @@ add_button, .add_bank_account button, .life_data p button {
   cursor: pointer;
 }
 
-add_button:hover, .add_bank_account button:hover, .life_data p button:hover {
+add_button:hover, .project_components ul li:hover, .add_bank_account button:hover, .life_data p button:hover {
   background-color: #e81c7b;
+}
+
+@keyframes show_screens {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide_screens {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes input_show {
@@ -7580,6 +7598,160 @@ add_button:hover, .add_bank_account button:hover, .life_data p button:hover {
     width: 0;
     border: none;
     background-color: transparent;
+  }
+}
+
+.index_wrapper {
+  min-height: 100vh;
+  padding: 40px 10px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  background-image: url("../images/bg.jpeg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.index_wrapper h1 {
+  color: #FFFFFF;
+  font-size: 55px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.index_wrapper .logo {
+  width: 100px;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.project_components {
+  width: 70%;
+}
+
+.project_components ul {
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  background-color: transparent;
+}
+
+.project_components ul li {
+  -ms-flex: 1 1;
+      flex: 1 1;
+  height: auto;
+  margin: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: space-between;
+      align-items: space-between;
+  transition: 0.2s all linear;
+}
+
+.project_components ul li:first-of-type {
+  margin-left: 0;
+}
+
+.project_components ul li:last-of-type {
+  margin-right: 0;
+}
+
+.project_components ul li a {
+  padding: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: #FFFFFF;
+}
+
+.project_components ul .flaticon-power:before,
+.project_components ul .flaticon-money:before,
+.project_components ul .flaticon-history-clock-button:before,
+.project_components ul .flaticon-download-business-statistics-symbol-of-a-graphic:before {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 60px;
+}
+
+.pages_details {
+  width: 70%;
+  height: auto;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.pages_details p {
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.pages_details img {
+  width: auto;
+  height: auto;
+}
+
+.login_page,
+.dashboard_page,
+.history_page,
+.transfer_page {
+  display: none;
+  opacity: 1;
+  padding: 20px;
+  background-color: #e81c7b;
+  border-radius: 6px;
+}
+
+.page_screen {
+  width: 27%;
+  border-radius: 6px;
+}
+
+.page_screen img {
+  width: 100%;
+  height: 100%;
+}
+
+.image_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+@media screen and (max-width: 750px) {
+  .index_wrapper h1 {
+    font-size: 30px;
+  }
+  .project_components {
+    width: 100%;
+  }
+  .project_components ul {
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+  }
+  .project_components ul li {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .pages_details {
+    width: 100%;
   }
 }
 
@@ -7836,14 +8008,14 @@ nav.mobile {
   box-shadow: none;
 }
 
-.flaticon-search:before,
-.flaticon-power:before {
+.searching_and_login_wrapper .flaticon-search:before,
+.searching_and_login_wrapper .flaticon-power:before {
   font-size: 40px;
   color: #FFFFFF;
   transition: 0.2s all linear;
 }
 
-.flaticon-power:before {
+.searching_and_login_wrapper .flaticon-power:before {
   color: #e81c7b;
 }
 
@@ -9069,26 +9241,6 @@ body {
 }
 
 /************ filtering and searching bar ***************/
-/*label[for="search_history"],
-label[for="filter_category"] {
-	font-size: 16px;
-	margin-right: 20px;
-	display: inline-block;
-}
-
-#search_history {
-	width: 270px;
-	display: inline-block;
-	box-shadow: inset 0px 2px 0 0 rgba(0, 0, 0, 0.22);
-	border: 1px solid $grey;
-	border-radius: $b_radius;
-	background: url("../images/search.svg") $white no-repeat;
-	background-size: 8%;
-	background-position: 95% 50%;
-}
-
-
-}*/
 #filter_category:focus,
 #search_history:focus {
   background-color: #FFFFFF;
