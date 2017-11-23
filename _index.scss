@@ -1,0 +1,137 @@
+
+.index_wrapper {
+	min-height: 100vh;
+	padding: 40px 10px 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background: {
+		image:url("../images/bg.jpeg");
+		position: center bottom;
+		repeat: no-repeat;
+		size: cover; 
+		attachment: fixed;
+	}
+	h1 {
+		color: $white;
+    	font-size: 55px;
+  		font-family: $font_family;
+  	}
+  	.logo {
+  		width: 100px;
+  		border: 1px solid $white;
+  		border-radius: $b_radius;
+  		padding: 10px;
+  	}
+}
+
+.project_components {
+	width: 70%;
+	ul {
+		margin: 0;
+		display: flex;
+		list-style-type: none;
+		background-color: transparent;
+		li {
+			@extend add_button;
+			flex: 1 1;
+			height: auto;
+			margin: 10px;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: space-between;
+			transition: $animation;
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				padding: 20px;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+			}
+		}
+		.flaticon-power:before,
+		.flaticon-money:before,
+		.flaticon-history-clock-button:before,
+		.flaticon-download-business-statistics-symbol-of-a-graphic:before {
+			color: $white;
+			margin: 0;
+			font-size: 60px;
+		}
+	}
+}
+
+.pages_details {
+	width: 70%;
+	height: auto;
+	margin: 10px;
+	border-radius: $b_radius;
+	p {
+		width: 100%;
+		color: $white;
+		text-align: center;
+		border-radius: $b_radius;
+	}
+	img {
+		width: auto;
+		height: auto;
+	}
+}
+
+.login_page,
+.dashboard_page,
+.history_page,
+.transfer_page {
+	display: none;
+	opacity: 1;
+	padding: 20px;
+	background-color: $rouge;
+	border-radius: $b_radius;
+}
+
+.page_screen {
+	width: 27%;
+	border-radius: $b_radius;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.image_wrapper {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+}
+
+
+@media screen and(max-width:750px) {
+	
+	.index_wrapper {
+		h1 {
+			font-size: 30px;
+		}
+	}
+
+	.project_components {
+		width: 100%;
+		ul {
+			flex-flow: column nowrap;
+			li {
+			width: 100%;
+			margin: 10px 0;
+			}
+		}
+	}
+
+	.pages_details {
+		width: 100%;
+	}
+
+}
